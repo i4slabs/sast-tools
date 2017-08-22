@@ -181,7 +181,7 @@ RUN set -x \
 
 ############################# PMD ##############################
 
-	ENV PMD_VERSION=5.5.5
+	ENV PMD_VERSION=5.8.1
 
 # Download the latest pmd release
 RUN curl -sLO \
