@@ -229,6 +229,12 @@ RUN pip install bandit
 USER $user
 
 
+############################ JShint ############################
+
+ RUN apk add --no-cache bash nodejs && \
+   npm install -g jshint
+
+	 
 ############################ JSlint ############################
 
 ENV JSLINT_VERSION=0.9.6
