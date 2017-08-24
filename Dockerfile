@@ -209,6 +209,21 @@ ENV BRAKEMAN_VERSION=3.6.1
 RUN gem install brakeman --version ${BRAKEMAN_VERSION} --no-format-exec
 
 
+############################ JShint ############################
+
+ RUN apk add --no-cache bash nodejs && \
+  npm install -g jshint && \
+  npm install -g jshint-html-reporter --save
+
+
+############################ JSlint ############################
+
+ENV JSLINT_VERSION=0.9.6
+
+RUN apk add --no-cache --virtual .run-deps nodejs \
+ && npm install -g jslint@$JSLINT_VERSION
+
+
 ############################ Bandit ############################
 
 #===================
@@ -227,21 +242,6 @@ RUN addgroup -g ${gid} ${group} && \
 RUN pip install bandit
 
 USER $user
-
-
-############################ JShint ############################
-
- RUN apk add --no-cache bash nodejs && \
-   npm install -g jshint && /
-	 npm install jshint-html-reporter --save
-
-
-############################ JSlint ############################
-
-ENV JSLINT_VERSION=0.9.6
-
-RUN apk add --no-cache --virtual .run-deps nodejs \
- && npm install -g jslint@$JSLINT_VERSION
 
 
 
