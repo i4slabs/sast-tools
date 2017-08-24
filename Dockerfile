@@ -229,4 +229,13 @@ RUN pip install bandit
 USER $user
 
 
+############################ JSlint ############################
+
+ENV JSLINT_VERSION=0.9.6
+
+RUN apk add --no-cache --virtual .run-deps nodejs \
+ && npm install -g jslint@$JSLINT_VERSION
+
+
+
 WORKDIR /workdir
