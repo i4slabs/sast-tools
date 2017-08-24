@@ -232,9 +232,10 @@ USER $user
 ############################ JShint ############################
 
  RUN apk add --no-cache bash nodejs && \
-   npm install -g jshint
+   npm install -g jshint && /
+	 npm install jshint-html-reporter --save
 
-	 
+
 ############################ JSlint ############################
 
 ENV JSLINT_VERSION=0.9.6
