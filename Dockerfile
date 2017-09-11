@@ -209,16 +209,16 @@ ENV BRAKEMAN_VERSION=3.6.1
 RUN gem install brakeman --version ${BRAKEMAN_VERSION} --no-format-exec
 
 
-############################ Retirejs ############################
-
- RUN npm install -g retire
-
-
 ############################ JShint ############################
 
  RUN apk add --no-cache bash nodejs && \
   npm install -g jshint && \
   npm install -g jshint-html-reporter --save
+
+
+########################### Retirejs ###########################
+
+	 RUN npm install -g retire
 
 
 ############################ JSlint ############################
