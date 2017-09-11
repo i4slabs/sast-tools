@@ -226,7 +226,7 @@ RUN gem install brakeman --version ${BRAKEMAN_VERSION} --no-format-exec
 
 ########################### Retirejs ###########################
 
-# 	 RUN npm install -g retire
+ 	 RUN npm install -g retire
 
 
 ############################ Bandit ############################
