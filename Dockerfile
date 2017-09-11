@@ -216,17 +216,17 @@ RUN gem install brakeman --version ${BRAKEMAN_VERSION} --no-format-exec
   npm install -g jshint-html-reporter --save
 
 
-########################### Retirejs ###########################
-
-	 RUN npm install -g retire
-
-
 ############################ JSlint ############################
 
 ENV JSLINT_VERSION=0.9.6
 
 RUN apk add --no-cache --virtual .run-deps nodejs \
  && npm install -g jslint@$JSLINT_VERSION
+
+
+########################### Retirejs ###########################
+
+ 	 RUN npm install -g retire
 
 
 ############################ Bandit ############################
