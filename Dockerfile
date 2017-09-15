@@ -219,9 +219,9 @@ RUN gem install brakeman --version ${BRAKEMAN_VERSION} --no-format-exec
 
 ########################### Retirejs ###########################
 
- RUN npm install -g retire && \
-  npm install -g underscore angular angular-animate angular-breadcrumb angular-loading-bar angular-sanitize angular-ui-bootstrap angular-ui-router angular-ui-validate bootbox bootstrap-sass clipboard file-saver font-awesome hopscotch jquery js-cookie moment typeahead.js webpack
+ RUN npm install -g retire
 
+ 
 ############################ Bandit ############################
 
 #===================
