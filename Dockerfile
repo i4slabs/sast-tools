@@ -212,6 +212,7 @@ RUN gem install brakeman --version ${BRAKEMAN_VERSION} --no-format-exec
 ############################ JShint ############################
 
  RUN apk add --no-cache bash nodejs && \
+  npm install -g bower && \
   npm install -g jshint && \
   npm install -g jshint-html-reporter --save
 
@@ -221,7 +222,8 @@ RUN gem install brakeman --version ${BRAKEMAN_VERSION} --no-format-exec
 
  RUN npm install -g retire
 
- 
+
+
 ############################ Bandit ############################
 
 #===================
